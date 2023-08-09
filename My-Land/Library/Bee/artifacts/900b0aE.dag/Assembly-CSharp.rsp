@@ -352,9 +352,11 @@
 -r:"Library/Bee/artifacts/900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/BagController.cs"
 "Assets/Scripts/JoyStickController.cs"
-"Assets/Scripts/PlayerAnimator.cs"
-"Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/Player/PlayerAnimator.cs"
+"Assets/Scripts/Player/PlayerController.cs"
+"Assets/Scripts/ProductPlantController.cs"
 -langversion:9.0
 
 /deterministic
