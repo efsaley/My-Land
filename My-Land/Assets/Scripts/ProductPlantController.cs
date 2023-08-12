@@ -6,7 +6,7 @@ public class ProductPlantController : MonoBehaviour
 {
     private bool isReadyToPick;
     private Vector3 originalScale;
-    [SerializeField] private GameObject boxGO;
+    [SerializeField] private ProductData productData;
     private BagController bagController;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class ProductPlantController : MonoBehaviour
         if (other.CompareTag("Player") && isReadyToPick)
         {
             bagController = other.GetComponent<BagController>();
-            bagController.AddProductToBag(boxGO);
+            bagController.AddProductToBag(productData);
             isReadyToPick = false; 
             Debug.Log("Touch");
             StartCoroutine(ProductPicked());
