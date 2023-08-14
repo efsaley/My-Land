@@ -29,6 +29,23 @@ public class CoinManager : MonoBehaviour
         DisplayCoins();
 
     }
+
+    public void SpendCoin(int price)
+    {
+        coins -= price;
+        DisplayCoins();
+    }
+
+    public bool TryBuyThisUnit(int price)
+    {
+        if (GetCoins() >= price)
+        {
+            SpendCoin(price);
+            return true;
+
+        }
+        return false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +56,10 @@ public class CoinManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public int GetCoins()
+    {
+        return coins;
     }
 
     private void DisplayCoins()

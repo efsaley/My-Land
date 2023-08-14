@@ -356,6 +356,7 @@
 "Assets/Scripts/CoinManager.cs"
 "Assets/Scripts/Data/ProductData.cs"
 "Assets/Scripts/JoyStickController.cs"
+"Assets/Scripts/LockedUnitController.cs"
 "Assets/Scripts/Player/PlayerAnimator.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/ProductPlantController.cs"
