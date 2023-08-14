@@ -353,11 +353,13 @@
 -r:"Library/Bee/artifacts/900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/BagController.cs"
+"Assets/Scripts/CoinManager.cs"
 "Assets/Scripts/Data/ProductData.cs"
 "Assets/Scripts/JoyStickController.cs"
 "Assets/Scripts/Player/PlayerAnimator.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/ProductPlantController.cs"
+"Assets/Scripts/UIManager.cs"
 -langversion:9.0
 
 /deterministic

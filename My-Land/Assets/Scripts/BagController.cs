@@ -29,11 +29,17 @@ public class BagController : MonoBehaviour
         {
             for (int i = productDataList.Count - 1; i >= 0; i--)
             {
+                SellProductToShop(productDataList[i]); 
                 Destroy(bag.transform.GetChild(i).gameObject);
                 productDataList.RemoveAt(i);
             }
             ControlBagCapacity();
         }
+    }
+    private void SellProductToShop(ProductData productData)
+    {
+        CoinManager.instance.ExchangeProduct(productData);
+
     }
  
     public void AddProductToBag(ProductData productData)
