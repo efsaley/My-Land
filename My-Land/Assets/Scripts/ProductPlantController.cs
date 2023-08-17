@@ -28,6 +28,7 @@ public class ProductPlantController : MonoBehaviour
             bagController = other.GetComponent<BagController>();
             if (bagController.IsEmptySpace())
             {
+            AudioManager.instance.PlayAudio(AudioClipType.grabClip);  
                 bagController.AddProductToBag(productData);
             isReadyToPick = false; 
             Debug.Log("Touch");

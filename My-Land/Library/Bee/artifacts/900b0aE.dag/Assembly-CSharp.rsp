@@ -354,14 +354,15 @@
 -r:"Library/Bee/artifacts/900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/BagController.cs"
 "Assets/Scripts/CoinController.cs"
-"Assets/Scripts/CoinManager.cs"
 "Assets/Scripts/Data/ProductData.cs"
 "Assets/Scripts/JoyStickController.cs"
 "Assets/Scripts/LockedUnitController.cs"
+"Assets/Scripts/Managers/AudioManager.cs"
+"Assets/Scripts/Managers/CoinManager.cs"
+"Assets/Scripts/Managers/UIManager.cs"
 "Assets/Scripts/Player/PlayerAnimator.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/ProductPlantController.cs"
-"Assets/Scripts/UIManager.cs"
 "Assets/Scripts/UnlockBakeryUnitController.cs"
 -langversion:9.0
 
