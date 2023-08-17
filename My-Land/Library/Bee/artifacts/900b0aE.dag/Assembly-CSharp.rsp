@@ -361,6 +361,7 @@
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/ProductPlantController.cs"
 "Assets/Scripts/UIManager.cs"
+"Assets/Scripts/UnlockBakeryUnitController.cs"
 -langversion:9.0
 
 /deterministic

@@ -2050,7 +2050,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.38012984, y: -0.000000010841922, z: 0.000000004455821, w: 0.92493314}
+  m_LocalRotation: {x: 0.38012984, y: -0.0000000108419265, z: 0.0000000044558237, w: 0.92493314}
   m_LocalPosition: {x: 0, y: 13.5, z: -13.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2785,12 +2785,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.85
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.01
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.23, z: 0}
+  m_Center: {x: 0, y: 1.19, z: 0}
 --- !u!114 &1217911653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2924,9 +2924,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1291279440}
+  - component: {fileID: 1291279441}
+  - component: {fileID: 1291279442}
   m_Layer: 0
   m_Name: UnlockedObjects
-  m_TagString: Untagged
+  m_TagString: UnlockBakeryUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2950,6 +2952,34 @@ Transform:
   m_Father: {fileID: 7805107419261053716}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1291279441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291279439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.886679, y: 8.892955, z: 8.360754}
+  m_Center: {x: -1.3935165, y: 3.6796374, z: -3.0801191}
+--- !u!114 &1291279442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291279439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48962a4d10c994832bde99f21751ca08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bakeryText: {fileID: 134362516}
+  maxStoredProductCount: 25
+  productType: 0
 --- !u!1 &1342253026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4100,7 +4130,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719710211}
-  m_LocalRotation: {x: 0.38012984, y: -0.000000010841922, z: 0.000000004455821, w: 0.92493314}
+  m_LocalRotation: {x: 0.38012984, y: -0.0000000108419265, z: 0.0000000044558237, w: 0.92493314}
   m_LocalPosition: {x: 0, y: 13.5, z: -13.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4674,7 +4704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2115905047
 Transform:
   m_ObjectHideFlags: 0
@@ -4719,10 +4749,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff32ca0523732437c867ab17a7102d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 12
+  price: 30
   priceText: {fileID: 1571246400}
   lockedUnit: {fileID: 2115905046}
-  unlockedUnit: {fileID: 2175420481322631844}
+  unlockedUnit: {fileID: 1291279439}
 --- !u!1 &2138964569
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,11 +5443,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3376d811255c24dc08c92229e77e22a7, type: 3}
---- !u!1 &2175420481322631844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2175420481676994419, guid: 3376d811255c24dc08c92229e77e22a7, type: 3}
-  m_PrefabInstance: {fileID: 2175420481322631843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2212322001888346894
 GameObject:
   m_ObjectHideFlags: 0

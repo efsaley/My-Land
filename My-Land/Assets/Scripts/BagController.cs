@@ -35,6 +35,26 @@ public class BagController : MonoBehaviour
             }
             ControlBagCapacity();
         }
+        if (other.CompareTag("UnlockBakeryUnit"))
+        {
+            UnlockBakeryUnitController bakeryUnit = other.GetComponent<UnlockBakeryUnitController>();
+
+            ProductType neededType = bakeryUnit.GetNeededProductType();
+
+            for (int i = productDataList.Count - 1; i >= 0; i--)
+            {
+                if (productDataList[i].productType  == neededType)
+                {
+                    if (bakeryUnit.StoreProduct() == true)
+                    {
+                        Destroy(bag.transform.GetChild(i).gameObject);
+                        productDataList.RemoveAt(i);
+                    }
+                }
+            }
+            StartCoroutine(PutProductIsInOrder());
+            ControlBagCapacity(); 
+        }
     }
     private void SellProductToShop(ProductData productData)
     {
@@ -110,5 +130,14 @@ public class BagController : MonoBehaviour
             return true;
         }
         return false;
+    }
+    private IEnumerator PutProductIsInOrder()
+    {
+        yield return new WaitForSeconds(0.15f);
+        for (int i = 0; i < bag.childCount; i++)
+        {
+            float newYPos = productSize.y * i;
+            bag.GetChild(i).transform.localPosition = new Vector3(0, newYPos, 0);
+        }
     }
 }
