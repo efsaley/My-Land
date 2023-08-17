@@ -51,7 +51,7 @@ public class ProductPlantController : MonoBehaviour
             yield return null;
         }
         //fide kuculdu
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
 
         timer = 0f;
         float growBackDuration = 1f;
