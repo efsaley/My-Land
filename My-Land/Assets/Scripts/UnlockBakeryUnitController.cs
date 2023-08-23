@@ -82,6 +82,7 @@ public class UnlockBakeryUnitController : MonoBehaviour
          {
             if (smokeParticle.isStopped)
             {
+                smokeParticle.Play();
 
             }
         }
